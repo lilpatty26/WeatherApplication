@@ -6,7 +6,7 @@ import requests
 def home(request):
     if request.method == 'POST':
         city = request.POST.get('city')
-        api_key =os.environ.get ('507dcae6d33751f955b6126301546a65')
+        api_key = os.environ.get ('507dcae6d33751f955b6126301546a65')
         url = f'http://api.openweathermap.org/data/2.5/weather?q={city}&appid=507dcae6d33751f955b6126301546a65'
         response = requests.get(url)
         data = response.json()
