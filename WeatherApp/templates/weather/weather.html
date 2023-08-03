@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <title>Weather at Your Fingertips</title>
+    <link rel="shortcut icon" type="x-icon" href="{% static 'clouds.png' %}">
+    <style>
+        body {
+            background-color: lightblue;
+            font-family: Arial, sans-serif;
+        }
+        .weather-container {
+            text-align: center;
+            padding: 20px;
+        }
+        .city {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .main-weather {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .temperature {
+            font-size: 20px;
+        }
+        .state {
+            font-size: 16px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="weather-container">
+        <h1 class="city">{{ city }}</h1>
+        <h3 class="state">{{ state }}</h3>
+        <h3 class="main-weather">Today's weather: {{ main }}</h3>
+        <h3 class="temperature">Temperature: {{ temp_fahrenheit  }}°F ({{temp_celsius }}°C)</h3>
+    </div>
+</body>
+</html>

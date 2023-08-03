@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Error</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff; /* Light blue background color */
+            color: #333; /* Dark gray text color */
+            text-align: center;
+            margin: 20px;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .error-image {
+            max-width: 300px;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .back-link {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Oops! City not found.</h1>
+    <p>We couldn't find the weather information for the specified city.</p>
+    <p>Please make sure you entered a valid city name and try again.</p>
+    <a href="{% url 'home' %}" class="back-link">Go back to Home</a>
+</body>
+</html>

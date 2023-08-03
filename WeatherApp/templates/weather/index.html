@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <title>Weather App</title>
+    <link rel="shortcut icon" type="x-icon" href="{% static 'cloudy.png' %}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff; /* Light blue background color */
+            color: #333; /* Dark gray text color */
+            text-align: center;
+            margin: 20px;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        form {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        label {
+            font-size: 20px;
+        }
+
+        input[type="text"] {
+            font-size: 16px;
+            padding: 5px;
+            margin: 0 10px;
+            width: 200px;
+        }
+
+        button {
+            font-size: 18px;
+            padding: 8px 20px;
+            background-color: #4CAF50; /* Green button color */
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .error-message {
+            font-size: 20px;
+            color: #FF0000; /* Red error message color */
+        }
+    </style>
+</head>
+<body>
+    <h1>Weather App</h1>
+    <p>Type A City and State Below <p>
+    <form method="post" action="{% url 'home' %}">
+        {% csrf_token %}
+        <label for="city">City:</label>
+        <input type="text" name="city" required>
+        <label for="state">State:</label>
+        <input type="text" name="state" required>
+        <button type="submit">Get Weather</button>
+    </form>
+    {% if error_message %}
+        <p class="error-message">{{ error_message }}</p>
+    {% endif %}
+</body>
+</html>
