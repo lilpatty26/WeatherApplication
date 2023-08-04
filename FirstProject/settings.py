@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-0s(m6$yo%67rzu)g(aq7!4e@x46iy9hu)&(hh%fp2e!#12y%=8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['pattyweatherapplications.netlify.app']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
