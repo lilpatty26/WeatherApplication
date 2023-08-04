@@ -1,3 +1,3 @@
 [build]
 command = "python manage.py collectstatic --noinput"
-publish = "C:/Users/maste/WeatherApplication/WeatherApp/static"
+publish = "WeatherApplication/WeatherApp/static"
