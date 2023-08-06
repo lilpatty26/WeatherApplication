@@ -2,6 +2,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 import requests
+import os
 
 def home(request):
     if request.method == 'POST':
